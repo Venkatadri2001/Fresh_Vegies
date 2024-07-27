@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="centered">
+    <p class="blink" style="font-size: 24px; color: red;">FRESH VEGETABLES FOR YOUR HEALTH</p>
+</div>
+<style>
+    @keyframes blink {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .blink {
+      animation: blink 1s step-start infinite;
+    }
+    .centered {
+        display: flex;
+        align-items: center; 
+        justify-content: center;
+        text-align: center;
+      }
+</style>
+
+<div class="row gy-4">
+    {% for vegetables in vegetables %}
+        <div class="col-md-4 d-flex align-items-stretch">
+        <div class="card" style="width: 18rem;">
+            <img src="{{vegetables.image}}" class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ vegetables.name}}</h5>
+            <p class="card-text">Rs. {{ vegetables.price }} rupees</p>
+            <a href="#" class="btn btn-primary">Add to Cart</a>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+</div>
