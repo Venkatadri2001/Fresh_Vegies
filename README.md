@@ -1,2 +1,3 @@
 # Fresh_Vegies
-Static vegetable web page
+Static web page,
+Designed by using HTML, CSS, Bootstrap, JQuery, Python, Django Framework and sqlite3 database.
